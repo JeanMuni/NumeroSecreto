@@ -1,6 +1,6 @@
 alert('Boas vindas ao jogo do número secreto');
 
-const numeroSecreto = 8;
+const numeroSecreto = 5;
 console.log('numeroSecreto (tipo):', numeroSecreto, typeof numeroSecreto);
 
 // 1) Pega a string do prompt
