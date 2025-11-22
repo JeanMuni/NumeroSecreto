@@ -1,62 +1,31 @@
-<!-- index.html -->
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo do Número Secreto</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #111;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container {
-            text-align: center;
-        }
-        #resultado {
-            font-size: 2rem;
-            margin-top: 20px;
-        }
-        #imagem-resultado {
-            width: 200px;
-            margin-top: 20px;
-            display: none;
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>JS Game</title>
 </head>
+
 <body>
     <div class="container">
-        <h1>Jogo do Número Secreto</h1>
-        <button onclick="jogar()">Jogar</button>
-        <div id="resultado"></div>
-        <img id="imagem-resultado" src="" alt="Resultado">
+        <div class="container__conteudo">
+            <img src="./img/robot.png" alt="robô mergulhador" class="container__imagem-robo" />
+            <div class="container__informacoes">
+                <img src="./img/trophy.png" alt="ícone de um troféu" />
+                 <div class="container__texto">
+                    <h1>Você <span class="container__texto-azul">acertou!</span></h1>
+                    <h2>Você descobriu o número secreto!</h2>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <script>
-        function jogar() {
-            alert('Boas vindas ao jogo do número secreto');
-            let numeroSecreto = 5;
-            let chute = prompt('Escolha um número entre 1 e 10');
-
-            let textoResultado = document.getElementById('resultado');
-            let img = document.getElementById('imagem-resultado');
-
-            if (chute == numeroSecreto) {
-                textoResultado.innerHTML = `🎉 Você acertou! O número secreto era ${numeroSecreto}!`;
-                img.src = 'https://i.imgur.com/TDg5Q7Y.png';
-                img.style.display = 'block';
-            } else {
-                textoResultado.innerHTML = `❌ Você errou! O número secreto era ${numeroSecreto}.`;
-                img.src = 'https://i.imgur.com/VxL5dP8.png';
-                img.style.display = 'block';
-            }
-        }
-    </script>
+    <script src="app.js" defer></script>
 </body>
-</html>V
+
+</html>
